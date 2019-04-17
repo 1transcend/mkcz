@@ -30,7 +30,6 @@ export default {
     },
     data(){
         return{
-            // id:this.$route.query.id
             info : []
         }  
     },
@@ -39,7 +38,7 @@ export default {
         })
         .then((res)=>{
             // console.log(this.$route.query.id);
-            console.log(res['data']['info'][0]);
+            // console.log(res['data']['info'][0]);
             this.info = res['data']['info'][0]
         })
     }

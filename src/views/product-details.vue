@@ -273,6 +273,7 @@ export default {
         background-color:#fff;
         width: 100%;
         height: 5rem;
+        margin-bottom:5rem;
     }
     .footer1 .footer1-left{
         float: left;
@@ -311,14 +312,14 @@ export default {
     }
     .footer1-right .zx{
         color: #fff;
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50%;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
         background:rgba(255,189,3,1);
     }
     .footer1-right .gm{
         color: #fff;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
         background:rgba(254,112,0,1);
         margin-right:1rem;
     }

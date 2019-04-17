@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Header/>
-        
+
         <div class="head-hz">
             <div class="search">
                 <input class="search-k" type="text" placeholder="搜索你要的商品">
@@ -36,6 +36,23 @@
             </div>
 
             <div class="content">
+                <div class="content-left" v-for="(v,k) in info" :key="k">
+                    <img :src="v.image_url" alt="图片">
+                    <div class="content-bottom">
+                        <p>{{v.brief}}</p>
+                        <p>￥{{v.price}}</p>
+                        <a href=""></a>
+                    </div>
+                </div>
+
+                <!-- <div class="content-right">
+                    <img src="../assets/images/qy.png" alt="图片">
+                    <div class="content-bottom">
+                        <p>企业站经济版一年</p>
+                        <p>￥2880.00</p>
+                        <a href=""></a>
+                    </div>
+                </div>
                 <div class="content-left">
                     <img src="../assets/images/qy.png" alt="图片">
                     <div class="content-bottom">
@@ -51,23 +68,7 @@
                         <p>￥2880.00</p>
                         <a href=""></a>
                     </div>
-                </div>
-                <div class="content-left">
-                    <img src="../assets/images/qy.png" alt="图片">
-                    <div class="content-bottom">
-                        <p>企业站经济版一年</p>
-                        <p>￥2880.00</p>
-                        <a href=""></a>
-                    </div>
-                </div>
-                <div class="content-right">
-                    <img src="../assets/images/qy.png" alt="图片">
-                    <div class="content-bottom">
-                        <p>企业站经济版一年</p>
-                        <p>￥2880.00</p>
-                        <a href=""></a>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -82,6 +83,19 @@ export default {
     components:{
         Footer,
         Header
+    },
+    data(){
+        return{
+            info:[]
+        }
+    },
+    created(){
+        this.axios.get("http://39.105.94.90/wxmkczgw/phone.php?app=goods&act=index",{
+        })
+        .then((res)=>{
+            console.log(res['data']['status']);
+            this.info = res['data']['status']
+        })
     }
 }
 </script>
