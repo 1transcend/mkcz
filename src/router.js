@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import index from './views/product-details'
 
 Vue.use(Router)
 
@@ -10,16 +10,40 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'index',
+      component: index
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/article',
+      name: 'article',
       // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
+      // this generates a separate chunk (article.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import(/* webpackChunkName: "article" */ './views/article.vue')
+    },
+    {
+      path: '/article-details',
+      name: 'article-details',
+      // route level code-splitting
+      // this generates a separate chunk (article-details.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "article-details" */ './views/article-details.vue')
+    },
+    {
+      path: '/product',
+      name: 'product',
+      // route level code-splitting
+      // this generates a separate chunk (product.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "product" */ './views/product.vue')
+    },
+    {
+      path: '/product-details',
+      name: 'product-details',
+      // route level code-splitting
+      // this generates a separate chunk (product-details.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "product-details" */ './views/product-details.vue')
     }
   ]
 })
