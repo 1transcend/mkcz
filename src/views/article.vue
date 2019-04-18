@@ -1,41 +1,43 @@
 <template>
     <div id="app">
         <Header/>
-
-        <div class="content">
-            <router-link :to="{path:'/article-details/',query:{id:istop.id}}">
-            <div class="content-bj">
-                <div class="content-img">
-                <img :src="istop.imageurl" alt="图片">
-                </div>
-                <div class="wz">
-                    <div class="wz-title">{{istop.title}}</div>
-                    <div class="wz-img"></div>
-                </div>
-            </div>
-            </router-link>
-        </div>
-
-        <div class="content1-bottom">
-            <div class="content1" v-for="(v,k) in list" :key="k">
-                <router-link :to="{path:'/article-details/',query:{id:v.id}}">
-                    <div class="content1-wz">
-                        <div class="content1-left">
-                            <img class="content1-img" :src="v.imageurl" alt="图片">
+        <van-pull-refresh v-model="refreshing" @refresh="onRefresh">
+            <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
+                <div class="content">
+                    <router-link :to="{path:'/article-details/',query:{id:istop.id}}">
+                    <div class="content-bj">
+                        <div class="content-img">
+                        <img :src="istop.imageurl" alt="图片">
                         </div>
-                        <div class="content1-right">
-                            <div class="content1-title">{{v.title}}</div>
-                            <div class="content1-ms">{{v.brief}}</div>
-                            <div class="content1-gd">
-                                <p>3人开通</p>
-                                <a href="">点击查看更多>></a>
-                            </div>
+                        <div class="wz">
+                            <div class="wz-title">{{istop.title}}</div>
+                            <div class="wz-img"></div>
                         </div>
                     </div>
-                </router-link>
-            </div>
-        </div>
+                    </router-link>
+                </div>
 
+                <div class="content1-bottom">
+                    <div class="content1" v-for="(v,k) in list" :key="k">
+                        <router-link :to="{path:'/article-details/',query:{id:v.id}}">
+                            <div class="content1-wz">
+                                <div class="content1-left">
+                                    <img class="content1-img" :src="v.imageurl" alt="图片">
+                                </div>
+                                <div class="content1-right">
+                                    <div class="content1-title">{{v.title}}</div>
+                                    <div class="content1-ms">{{v.brief}}</div>
+                                    <div class="content1-gd">
+                                        <p>3人开通</p>
+                                        <a href="">点击查看更多>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </router-link>
+                    </div>
+                </div>
+            </van-list>
+        </van-pull-refresh>
         <!-- 底部 -->
         <Footer/>
     </div>
@@ -44,29 +46,73 @@
 <script>
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import List from 'vant/lib/list';
+import 'vant/lib/list/style';
+import PullRefresh from 'vant/lib/pull-refresh';
+import 'vant/lib/pull-refresh/style';
 export default {
      components: {
          Footer,
-         Header
+         Header,
+        "VanList": List,
+        "VanPullRefresh": PullRefresh
      },
     data(){
         return{
             istop : [],
             list : [],
+            page: 1,
+            loading:true,
+            finished:false,
+            refreshing:false,
+            offset:0,
+        }
+    },
+    methods:{
+        onRefresh(){
+            this.page = 1;
+            this.axios.get('/wxmkczgw/phone.php?app=article&act=articleList&page='+this.page,{
+            })
+            .then((res)=>{
+                if(res['data']['info']['list'].length>0){
+                    this.list = res['data']['info']['list']
+                }else{
+                    this.finished = true;
+                }
+                this.loading = false
+                this.refreshing = false
+            })
+        },
+
+        onLoad(){
+            this.page++;
+            this.axios.get('/wxmkczgw/phone.php?app=article&act=articleList&page='+this.page,{
+            })
+            .then((res)=>{
+                if(res['data']['info']['list'].length>0){
+                    this.list = this.list.concat(res['data']['info']['list'])
+                }else{
+                    this.finished = true;
+                }
+                this.loading = false
+            })
         }
     },
 
     created(){
-        this.axios.get('http://39.105.94.90/wxmkczgw/phone.php?app=article&act=articleList&id=14&page=1',{
+        this.axios.get('http://39.105.94.90/wxmkczgw/phone.php?app=article&act=articleList&page=1',{
         })
         .then((res)=>{
             console.log(res['data']['info']['istop']);
+            console.log(res);
             console.log(res['data']['info']['list']);
+            console.log(this.page);
             // console.log(res['data']['info']['list'][0]['content']);
             this.istop = res['data']['info']['istop'];
             this.list = res['data']['info']['list'];
             // var content = res['data']['info']['list'][0]['content'];
             // console.log(content.innerTEXT);
+            this.loading = false
         })
     }
 }
@@ -76,6 +122,7 @@ export default {
     #app{
         position: relative;
         background:rgba(235, 235, 235, 1);
+        padding-bottom:100px;
     }
 
     .content{

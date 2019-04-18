@@ -3,9 +3,6 @@
         <Header/>
 
         <div class="sp-bj">
-            <!-- <div class="sp-img">
-                <img src="../assets/images/sp.png" alt="图片">
-            </div> -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="../assets/images/sp.png" alt=""></div>

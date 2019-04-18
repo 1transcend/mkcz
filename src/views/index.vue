@@ -1,268 +1,605 @@
 <template>
     <div>
-         <!-- 头部 -->
-        <div class="header">
-            <a href="">
-                <img src="../assets/images/top.jpg" alt="">
-            </a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../assets/images/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/images/banner.png" alt=""></div>
+            </div>
+        <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
         </div>
 
-        <!-- 我们擅长什么版块 -->
-        <div class="my_good">
-            <!--版芯 -->
-            <div class="common">
-                <!-- 标题 和 介绍 -->
-                <div class="good_title">
-                    <img src="../assets/images/title.png" alt="请重试">
-                </div>
-                <!-- 擅长项     deve => 开发简写-->
-                <div class="good_list">
-                    <!-- 1.APP定制开发 -->
-                    <div class="app_deve clearfix">
-                        <!-- 分为两部分  一部分为图片  一部分为文字 -->
-                        <!-- 1.1图片 -->
-                        <img src="../assets/images/good_list1.png" alt="">
-                        <!-- 1.2文字 -->
-                        <p>
-                            擅长软件定制开发，涉及在线信息管理系统、ERP系统、在线交易系统等基于B/S模式的系统开发。
-                        </p>
-                    </div>
-                    <!-- 2.生产系统（MES系统） -->
-                    <div class="mes_deve">
-                        <!-- 分为两部分  一部分为图片  一部分为文字 -->
-                        <!-- 1.1图片 -->
-                        <img src="../assets/images/good_list2.png" alt="">
-                        <!-- 1.2文字 -->
-                        <p>
-                            擅长软件定制开发，涉及在线信息管理系统、ERP系统、在线交易系统等基于B/S模式的系统开发。
-                        </p>
-                    </div>
-                    <!-- 3.微信公众平台开发   WeChat => 微信    -->
-                    <div class="WeChat_deve">
-                        <!-- 分为两部分  一部分为图片  一部分为文字 -->
-                        <!-- 1.1图片 -->
-                        <img src="../assets/images/good_list3.png" alt="">
-                        <!-- 1.2文字 -->
-                        <p>
-                            对微信公众平台经行接口开发，实现微信平台和你的已有系统数据交互，让您的企业和用户经行一对一的互动与沟通。
-                        </p>
-                    </div>
-                    <!-- 4.小程序开发  program=> 程序 -->
-                    <div class="min_program_deve">
-                        <!-- 分为两部分  一部分为图片  一部分为文字 -->
-                        <!-- 1.1图片 -->
-                        <img src="../assets/images/good_list4.png" alt="">
-                        <!-- 1.2文字 -->
-                        <p>
-                            定制化小程序功能开发，非常熟悉小程序开发流程，自主开发了小程序商城。
-                        </p>
-                    </div>
-                </div>
-                <!-- 底部 店铺管理-->
-                <div class="godd_bottom">
-                    <img src="../assets/images/good_list5.png" alt="">
-                </div>
+        <div class="imag"><img src="../assets/images/title.png" alt=""></div>
+        <div class="one">
+            <div class="two">
+                <img src="../assets/images/20.png" alt="">
+                <span>擅长软件定期开发，涉及在线信息管理系统、ERR系统、在线交易系统等基于B/S模式的系统开发。</span>
+            </div>
+             <div class="three">
+                 <img src="../assets/images/27.png" alt="">
+                <span>擅长软件定期开发，涉及在线信息管理系统、ERR系统、在线交易系统等基于B/S模式的系统开发。</span>
+            </div>
+            <div class="four">
+                <img src="../assets/images/26.png" alt="">
+                <span>对微信公共平台进行接口开发，实现微信平台和你已有系统进行数据交互，让您的企业和用户进行一对一的互动与沟通。</span>
+            </div>
+            <div class="five">
+                 <img src="../assets/images/25.png" alt="">
+                <span>定制化小程序功能开发，非常熟悉小程序开发流程，自主开发小程序商城。</span>
             </div>
         </div>
-
-        <div class="Core-function">
-            <!-- 核心功能-盒子 -->
-            <div class="Core-function-box">
-                <!-- 核心功能-标题 -->
-                <div class="Core-function-title">
-                    <h1>核心功能</h1>
-                </div>
-                <!-- 核心功能-内容 -->
-                <div class="Core-function-content">
-                    <!-- 核心功能-内层 -->
-                    <div class="Core-function-content-within">
-                        <!-- 第一行 -->
-                        <ul>
-                            <li><a href=""><img src="../assets/images/optimize.png" alt="">
-                                    <p>拖拽制作</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/Group-purchase.png" alt="">
-                                    <p>拼团</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/distribution.png" alt="">
-                                    <p>分销机制</p>
-                                </a></li>
-                        </ul>
-                        <!-- 第二行 -->
-                        <ul>
-                            <li><a href=""><img src="../assets/images/stores.png" alt="">
-                                    <p>多门店</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/Small-program.png" alt="">
-                                    <p>小程序支持</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/subscribe.png" alt="">
-                                    <p>预约预售</p>
-                                </a></li>
-                        </ul>
-                        <!-- 第三行 -->
-                        <ul>
-                            <li><a href=""><img src="../assets/images/APP@2x.png" alt="">
-                                    <p>APP支持</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/marketing.png" alt="">
-                                    <p>多种营销活动</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/coupon.png" alt="">
-                                    <p>优惠劵</p>
-                                </a></li>
-                        </ul>
-                        <!-- 第四行 -->
-                        <ul>
-                            <li><a href=""><img src="../assets/images/seckill.png" alt="">
-                                    <p>秒杀</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/bargain.png" alt="">
-                                    <p>砍价</p>
-                                </a></li>
-                            <li><a href=""><img src="../assets/images/template.png" alt="">
-                                    <p>海量模板</p>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="price">
+            <div class="apple">
+                <img src="../assets/images/21.png" alt="">
             </div>
         </div>
-
-        <!-- 行业解决方案版块 -->
-        <!-- 版心 -->
-        <div class="common">
-            <!-- 行业解决方案-盒子 -->
-            <div class="industry-solution-box">
-                <!-- 行内解决方案标题 -->
-                <div class="industry-solution-title">
-                    <!-- 行内解决方案-主标题 -->
-                    <h1>行业解决方案</h1>
-                    <!-- 行内解决方案-副标题-->
-                    <span>更加垂直的行内解决方案,满足广泛的业务需求</span>
-                </div>
-                <!-- 行内解决方案内容 -->
-                <div class="industry-solution-content">
-                    <!-- 第一行 -->
-                    <ul>
-                        <li><a href=""><img src="../assets/images/icon-22@2x.png" alt="">
-                                <p>餐饮服务</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-23@2x.png" alt="">
-                                <p>美容养生</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-24@2x.png" alt="">
-                                <p>服装鞋帽</p>
-                            </a></li>
-                    </ul>
-                    <!-- 第二行 -->
-                    <ul>
-                        <li><a href=""><img src="../assets/images/icon-25@2x.png" alt="">
-                                <p>教育培训</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-26@2x.png" alt="">
-                                <p>汽车服务</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-27@2x.png" alt="">
-                                <p>礼品鲜花</p>
-                            </a></li>
-                    </ul>
-                    <!-- 第三行 -->
-                    <ul>
-                        <li><a href=""><img src="../assets/images/icon-28@2x.png" alt="">
-                                <p>生鲜水果</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-29@2x.png" alt="">
-                                <p>数码家电</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-30@2x.png" alt="">
-                                <p>医疗器械</p>
-                            </a></li>
-                    </ul>
-                    <!-- 第四行 -->
-                    <ul>
-                        <li><a href=""><img src="../assets/images/icon-31@2x.png" alt="">
-                                <p>蛋糕烘培</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-32@2x.png" alt="">
-                                <p>日用百货</p>
-                            </a></li>
-                        <li><a href=""><img src="../assets/images/icon-33@2x.png" alt="">
-                                <p>亲子母婴</p>
-                            </a></li>
-                    </ul>
-                </div>
+        <div class="index">
+            <div class="container">
+           <div class="box"></div>       
+            <span>核心功能</span>
+            <div class="banner"></div>
             </div>
+            <dir class="content">
+                <div class="touch"><img src="../assets/images/ic.png" alt=""><span>拖拽机制</span></div>
+                <div class="touch"><img src="../assets/images/pin.png" alt=""><span > 拼图</span></div>
+                <div class="touch"><img src="../assets/images/fen.png" alt=""><span> 分销机制</span></div>
+                <div class="touch1"><img src="../assets/images/N.png" alt=""><span> 多门面</span></div>
+                <div class="touch1"><img src="../assets/images/x.png" alt=""><span > 小程序支持</span></div>
+                <div class="touch1"><img src="../assets/images/y.png" alt=""><span> 预约预售</span></div>
+                 <div class="touch1"><img src="../assets/images/A.png" alt=""><span> APP支持</span></div>
+                <div class="touch1"><img src="../assets/images/xiao.png" alt=""><span > 多种营销活动</span></div>
+                <div class="touch1"><img src="../assets/images/juan.png" alt=""><span> 优惠券</span></div>
+                 <div class="touch1"><img src="../assets/images/m.png" alt=""><span> 秒杀</span></div>
+                <div class="touch1"><img src="../assets/images/k.png" alt=""><span > 砍价</span></div>
+                <div class="touch1"><img src="../assets/images/ban.png" alt=""><span> 海量模板</span></div>
+            </dir>
         </div>
-
-        <!-- 公司简介部分 -->
+        <div class="solve">
+            <div class="name"></div>
+            <div class="fang"><span>行业解决方案</span></div>
+            <div class="tu">更加垂直的行业解决方案，满足广泛的业务需求</div>
+            <div class="borther"><div class="footer"><img src="../assets/images/icon-22.png" alt=""><span>餐饮服务</span></div></div>
+            <div class="borther"> <div class="footer"><img src="../assets/images/icon-23.png" alt=""><span>养生美容</span></div> </div>
+            <div class="borther"> <div class="footer"><img src="../assets/images/icon-24.png" alt=""><span>服装鞋帽</span></div> </div>
+            <div class="borther1"><div class="footer"><img src="../assets/images/icon-25.png" alt=""><span>教育培训</span></div></div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-26.png" alt=""><span>汽车服务</span></div> </div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-27.png" alt=""><span>礼品鲜花</span></div> </div>
+            <div class="borther1"><div class="footer"><img src="../assets/images/icon-28.png" alt=""><span>生鲜水果</span></div></div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-29.png" alt=""><span>数码家电</span></div> </div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-30.png" alt=""><span>医疗器械</span></div> </div>
+            <div class="borther1"><div class="footer"><img src="../assets/images/icon-31.png" alt=""><span>蛋糕烘焙</span></div></div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-32.png" alt=""><span>日用百货</span></div> </div>
+            <div class="borther1"> <div class="footer"><img src="../assets/images/icon-33.png" alt=""><span>亲子母婴</span></div> </div>
+        </div>
         <div class="company">
-            <div class="introduce">
-                <img class="title" src="../assets/images/gsjj@2x.png" alt="">
-                <p>无锡明科财致网络技术有限公司是一家专业从事互联网产品与服务的提供商，坐落于江苏省无锡市太湖之滨。经过多年创新发展，目前在网站、软件、小程序、APP、微信公众平台等领域发展迅速。</p>
-                <div class="images">
-                    <img class="left-image" src="../assets/images/cx@2x.png" alt="">
-                    <img class="right-image" src="../assets/images/zu23@2x.png" alt="">
-                </div>
+            <div class="jian"><img src="../assets/images/gong.png" alt=""></div>
+            <span>无锡明科财政网络技术有限公司是一家专业从事互联网产品与服务提供的提供商，坐落于江苏省无锡市太湖之滨。经过多年创新发展，目前在网站、软件、小程序、App、微信公共平台等领域发展迅速。</span>
+            <div class="major">
+                <img src="../assets/images/chuang.png" alt="">
+                
             </div>
-            <!-- 公司实力及优势部分 -->
-            <div class="strength">
-                <h3>公司实力及优势</h3>
-                <p>这里有一群对互联网爱到狂热的人，<br>在追求完美的路上我们披荆斩棘，永不退缩。</p>
-                <div class="images">
-                    <img src="../assets/images/21@2x(1).png" alt="">
-                    <img src="../assets/images/21 @2x.png" alt="">
-                </div>
-                <div class="images">
-                    <img src="../assets/images/21 5@2x.png" alt="">
-                    <img src="../assets/images/21 6@2x.png" alt="">
-                </div>
+            <div class="qq">
+                <img src="../assets/images/20190418160953.png" alt="">
             </div>
+            <div class="advantage">
+                <span>公司实力及优势</span>
+            </div>
+            <div class="font">
+                <span>这里有一群对互联网爱到狂热的人，<br>在追求完美的路上我们将披荆斩棘，永不退缩。 </span>
+            </div>
+            <div class="big">
+                <div class="team"><img src="../assets/images/组 21(1).png" alt=""></div>
+                  <div class="team"><img src="../assets/images/组 21 副本.png" alt=""></div>
+                  <div class="team"><img src="../assets/images/组 21 副本 5.png" alt=""></div>
+                  <div class="team"><img src="../assets/images/组 21 副本 6.png" alt=""></div>
+            </div>
+        </div>
+        <div class="classic">
+            <div class="six"></div>
+            <div class="session"><span>经典案例</span></div>
+            <div class="elephone"><img src="../assets/images/图层 23.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/图层 26.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/图层 29.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/T.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/沪东机械铸造.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/灵鸿电子.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/图层 34.png" alt=""></div>
+            <div class="elephone"><img src="../assets/images/图层 35.png" alt=""></div>
+        </div>
+        <div class="end">
+            <div class="code"></div>
+            <div class="code1"><img src="../assets/images/微信图片_20190413110646.png" alt=""></div>
+            <div class="code2"><span>版权所有：无锡明科财政网络科技有限公司</span></div>
+            <div class="code3"><span>电话：0510-83570091</span></div>
+            <div class="code4"><span>地址：无锡市惠山区路21号大润云商4号楼1107室</span></div>
         </div>
 
-        <!-- 经典案例部分 -->
-        <div class="example">
-            <!-- 案例上部分 -->
-            <div class="example-top">
-                <h1>经典案例</h1>
-            </div>
-            <!-- 案例下部分 -->
-            <div class="example-bottom">
-                <div class="example-bottom-top">
-                    <a href=""><img src="../assets/images/huawei@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/shui@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/zte@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/T@2x.png" alt="" id="special"></a>
-                </div>
-                <div class="example-bottom-foot">
-                    <a href=""><img src="../assets/images/hu@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/lin@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/xin@2x.png" alt=""></a>
-                    <a href=""><img src="../assets/images/hui@2x.png" alt="" id="special"></a>
-                </div>
-            </div>
-        </div>
-        <!-- 页面尾部 -->
-        <div class="footer">
-            <!-- 自定义列表 -->
-            <dl>
-                <dd><img src="../assets/images/ewm@2x.png" alt="" class="dd-one"></dd>
-                <dd>版权所有：无锡明科财致网络科技有限公司</dd>
-                <dd>电话：0510-83570091</dd>
-                <dd>地址：无锡市惠山区路21号大润云商4号楼1107室</dd>
-            </dl>
-        </div>
+        <Footer/>
     </div>
 </template>
 
-<script>
-   import flexible from "../assets/js/flexible.js"
-   import flexible_css from "../assets/js/flexible_css.js"
-    export default {
+<style>
+.image img{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2%;
+}
+.imag img{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 4%;
+}
+.one {
+    height: 300px;
+    width: 100%;
+    /* background-color: #eee; */
+}
+.one .two{
+    width: 88%;
+    height: 28%;
+    margin: 0 auto;
+    /* margin-bottom: 1%; */
+}
+.one .two img{
+    height: 80%;
+    margin-right: 20%;
+}
+.one .two span{
+    z-index:2000px;
+    font-size: 10px;
+    float: left;
+    margin-top: -13%;
+    margin-left: 15%;
+    color: #aaa;
+}
+.one .three{
+    width: 88%;
+    height: 28%;
+    margin: 0 auto;
+    /* margin-bottom: 1%; */
+}
+.one .three img{
+    height: 80%;
+    margin-right: 20%;
+    margin-left: 2%;
+}
+.one .three span{
+    z-index:2000px;
+    font-size: 10px;
+    float: left;
+    margin-top: -13%;
+    margin-left: 15%;
+    color: #aaa;
+
+}
+.one .four{
+    width: 88%;
+    height: 28%;
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+.one .four img{
+    height: 80%;
+    margin-right: 20%;
+    margin-left: 2%;
+}
+.one .four span{
+    z-index:2000px;
+    font-size: 10px;
+    float: left;
+    margin-top: -13%;
+    margin-left: 15%;
+    color: #aaa;
+
+}
+.one .five{
+    width: 88%;
+    height: 28%;
+    margin: 0 auto;
+    /* margin-bottom: 1%; */
+}
+.one .five img{
+    height: 80%;
+    margin-right: 20%;
+    margin-left: 2%;
+}
+.one .five span{
+    z-index:2000px;
+    font-size: 10px;
+    float: left;
+    margin-top: -13%;
+    margin-left: 15%;
+    color: #aaa;
+}
+.price{
+    width: 100%;
+    height: 200px;
+    margin-top: 15%;
+}
+.price .apple{
+    width: 80%;
+    height: 63%;
+    margin: 0 auto;
+}
+.price .apple img{
+    width: 100%;
+    height: 100%;
+}
+.index{
+    z-index:2000px;
+    width: 100%;
+    height: 480px;
+    background-color: #aaa;
+    margin-top: -12%;
+    position: relative;
+}
+.index .container{
+    width: 45%;
+    height: 15%;
+    margin: 0 auto;
+}
+.index .container .box{
+    border-top: 1px solid #fff;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    left: 28%;
+    top:8%;
+}
+.index .container span{
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    left: 40.5%;
+    top:5.5%;
+}
+.index .container .banner{
+    border-top: 1px solid #fff;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    left: 62%;
+    top:8%;
+}
+.index .content{
+    width: 80%;
+    height:78%;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 3%;
+    padding: 0px;
+}
+.index .content .touch{
+    width: 17%;
+    height: 13%;
+    float: left;
+    margin-left: 12.5%;
+    margin-top: 9%;
+}
+.index .content span{
+    width: 80px;
+    height: 25px;
+    font-size: 11px;
+    margin-top: 7%;
+    margin-left: -17px;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+.index .content .touch img{
+    width: 100%;
+    height: 100%;
+}
+.index .content .touch1{
+    width: 17%;
+    height: 13%;
+    float: left;
+    margin-left: 12.5%;
+    margin-top: 12%;
+}
+.index .content .touch1 img{
+    width: 100%;
+    height: 100%;
+}
+.solve{
+    width: 100%;
+    height: 660px;
+    background-color: #f8f8f8;
+}
+.solve .name{
+    width: 50%;
+    height: 4%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+.solve .fang{
+    width: 50%;
+    height: 6%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+.solve .tu{
+    width: 90%;
+    background-color: #fff;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 3px;
+    color: #fff;
+    background-color: #00a1ea;
     }
+.solve .borther{
+    width: 24%;
+    height: 17.5%;
+    background-color: #fff;
+    float: left;
+    margin-left: 7.5%;
+    margin-top: 7%;
+}
+.solve .borther .footer{
+    width: 100%;
+    height: 70%; text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+.solve .borther .footer img{
+    width: 60%;
+    height: 60%;
+}
+.solve .borther .footer span{
+    width: 80px;
+    height: 25px;
+    font-size: 11px;
+    margin-top: 10%;
+    margin-left: 5px;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+.solve .borther1{
+    width: 24%;
+    height: 17.5%;
+    background-color: #fff;
+    float: left;
+    margin-left: 7.5%;
+    margin-top: 3%;
+}
+.solve .borther1 .footer{
+    width: 100%;
+    height: 70%; text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+.solve .borther1 .footer img{
+    width: 60%;
+    height: 60%;
+}
+.solve .borther1 .footer span{
+    width: 80px;
+    height: 25px;
+    font-size: 11px;
+    margin-top: 10%;
+    margin-left: 5px;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+.company{
+    width: 100%;
+    height: 500px;
+    /* background-color: skyblue; */
+    margin-top: -6%;
+    background-image: url('../assets/images/liang.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -57%;
+    margin-top: 5%;
+
+}
+.company .jian{
+    width: 30%;
+    height: 10%;
+    margin-left: 63%;
+}
+.company .jian img{
+    width: 100%;
+    height: 100%;
+    margin-top: 9%;
+}
+.company span{
+    width: 88%;
+    height: 40%;
+    display: block;
+    margin-left: 63%;
+    margin-top: 5%;
+    font-size: 13px;
+    line-height:28px;
+}
+.company .major{
+    width: 53%;
+    height: 25%;
+    /* background-color: #eee;   */
+    margin-left: 62%;
+}
+.company .major img{
+    width: 100%;
+    height: 100%;
+    margin-top: -10%;
+}
+.company .qq{
+    width: 70%;
+    height: 40%;
+    margin-left: 80%;
+    margin-top: -50%;
+    /* background-image: url('../assets/images/20190418160953.png');
+    background-size: contain;
+    background-position: 151px 0px;
+    background-repeat: no-repeat; */
+    /* overflow: hidden; */
+}
+.company .qq img{
+    width: 50%;
+    height: 90%;
+    margin-left: 60%;
+    margin-top: 5%;
+
+}
+.company .advantage{
+    width: 50%;
+    height: 8%;
+    margin-left: 80%;
+    margin-top: 7%;
+    /* background-color: #eee; */
+    background-image: url('../assets/images/x26.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.company .advantage span{
+    z-index: 200;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 11%;
+    padding: 2%;
+}
+ .company .font{
+     width: 90%;
+     height:11%;
+     /* background-color: red; */
+     margin-left:64%;
+     text-align: center;
+ }
+ .company .font span{
+     margin-top: 0;
+     margin-left: 5%;
+     font-size: 13px;
+     color: #a3a3a3;
+     line-height: 20px;
+ }
+  .company .big{
+      width: 100%;
+      height: 600px;
+      /* background-color: #eee; */
+      text-align: center;
+      margin-left: 57%;
+  }
+  .company .big .team{
+      width: 35%;
+      height: 30%;
+      /* background-color: skyblue; */
+      float: left;
+      margin-left: 4.2%;
+      margin-top: 3%;
+  }
+.company .big .team img{
+        width: 100%;
+        height: 100%;
+        margin-left: 25%;
+        margin-right: 25%;
+        
+}
+.classic{
+    width: 100%;
+    height: 200px;
+    background-color: #f8f8f8;
+    margin-top: 130%;
+}
+.classic .six{
+    width: 30%;
+    height: 4%;
+    margin: 0 auto;
+}
+.classic .session{
+    width: 30%;
+    height: 8%;
+    margin: 0 auto;
+}
+.classic .session span{
+    text-align: center;
+    padding: 20px;
+}
+.classic .elephone{
+    width: 20%;
+    height: 35%;
+    /* background-color: #fff; */
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.classic .elephone img{
+    width: 100%;
+    height: 100%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.end{
+    width: 100%;
+    height: 240px;
+    background-image: url('../assets/images/图层 37 副本 2.png');
+    margin-bottom:5rem;
+}
+.end .code{
+    width: 30%;
+    height: 15%;
+    margin: 0 auto;
+}
+.end .code1{
+    width: 30%;
+    height: 45%;
+    margin: 0 auto;
+}
+.end .code1 img{
+    width: 100%;
+    height: 100%;
+}
+.end .code2{
+    width: 80%;
+    height: 9%;
+    margin: 0 auto;
+
+    /* background-color: #fff; */
+}
+.end .code2 span{
+    font-size: 12px;
+    color: #939393;
+    margin-left: 10%;
+}
+.end .code3 span{
+    font-size: 12px;
+    color: #939393;
+    margin-left: 28%;
+}
+.end .code4 span{
+    font-size: 12px;
+    color: #939393;
+    margin-left: 6%;
+}
+.end .code3{
+    width: 80%;
+    height: 9%;
+    margin: 0 auto;
+}
+.end .code4{
+    width: 80%;
+    height: 11%;
+    margin: 0 auto;
+    /* background-color: #fff; */
+}
+.swiper-slide img{
+        width: 100%;
+    }
+</style>
+
+<script>
+import Footer from "@/components/Footer";
+import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.min.css';
+export default {
+    components:{
+       Footer
+    }
+}
 </script>
 
 
-<style scoped>
-    @import "../assets/css/index.css";
-</style>

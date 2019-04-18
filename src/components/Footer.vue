@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <router-link to="/index">
+        <router-link to="/">
         <div class="sy">
             <img src="../assets/images/sy.png" alt="首页">
             <a href="">首页</a>

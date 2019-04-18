@@ -5,7 +5,8 @@ import store from './store'
 import axios from 'axios';
 import'./assets/css/swiper.min.css'
 
-Vue.prototype.axios = axios
+Vue.prototype.axios = axios;
+axios.defaults.baseURL = 'http://39.105.94.90';
 
 Vue.config.productionTip = false
 

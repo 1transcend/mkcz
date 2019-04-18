@@ -29,6 +29,7 @@ export default {
         background:rgba(242,242,242,1);
         height: 5rem;
         margin-bottom: 0.8rem;
+        z-index:9999;
     }
     .header-left{
         float: left;

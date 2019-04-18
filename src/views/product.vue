@@ -46,31 +46,6 @@
                         </div>
                     </router-link>
                 </div>
-
-                <!-- <div class="content-right">
-                    <img src="../assets/images/qy.png" alt="图片">
-                    <div class="content-bottom">
-                        <p>企业站经济版一年</p>
-                        <p>￥2880.00</p>
-                        <a href=""></a>
-                    </div>
-                </div>
-                <div class="content-left">
-                    <img src="../assets/images/qy.png" alt="图片">
-                    <div class="content-bottom">
-                        <p>企业站经济版一年</p>
-                        <p>￥2880.00</p>
-                        <a href=""></a>
-                    </div>
-                </div>
-                <div class="content-right">
-                    <img src="../assets/images/qy.png" alt="图片">
-                    <div class="content-bottom">
-                        <p>企业站经济版一年</p>
-                        <p>￥2880.00</p>
-                        <a href=""></a>
-                    </div>
-                </div> -->
             </div>
         </div>
 
@@ -92,7 +67,7 @@ export default {
         }
     },
     created(){
-        this.axios.get("http://39.105.94.90/wxmkczgw/phone.php?app=goods&act=index",{
+        this.axios.get("wxmkczgw/phone.php?app=goods&act=index",{
         })
         .then((res)=>{
             console.log(res['data']['status']);
