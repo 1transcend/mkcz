@@ -45,12 +45,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
     #app{
         background:rgba(235, 235, 235, 1);
         position: relative;
     }
-
     .nav{
         width: 100%;
         height: 8.5rem;
@@ -73,11 +72,12 @@ export default {
         color:rgba(103,122,161,1);
         margin:0;
         padding:0 1rem;
+        font-size:0.8rem;
     }
     .nav .nav-time{
         float: left;
         color:rgba(219,219,219,1);
-        margin:0;
+        margin:-0.1rem 0 0 0;
     }
 
     .content{
@@ -92,13 +92,7 @@ export default {
         letter-spacing:0.2rem;
         line-height: 1.4rem;
     }
-    .content .content-text img { width:100px !important; }
-    /* .content .content-img{
-        height: 15rem;
-        padding: 1rem;
+    .content img{
+        width:95%;
     }
-    .content .content-img img{
-        width: 100%;
-        height: 15rem;
-    } */
 </style>

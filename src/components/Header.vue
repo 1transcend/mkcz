@@ -19,13 +19,16 @@ export default {
 </script>
 
 <style>
+    a:active{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
     header{
-    position:fixed;
-    top: 0;
-    width: 100%;
-    background:rgba(242,242,242,1);
-    height: 5rem;
-    margin-bottom: 0.8rem;
+        position:fixed;
+        top: 0;
+        width: 100%;
+        background:rgba(242,242,242,1);
+        height: 5rem;
+        margin-bottom: 0.8rem;
     }
     .header-left{
         float: left;

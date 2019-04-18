@@ -37,12 +37,14 @@
 
             <div class="content">
                 <div class="content-left" v-for="(v,k) in info" :key="k">
-                    <img :src="v.image_url" alt="图片">
-                    <div class="content-bottom">
-                        <p>{{v.brief}}</p>
-                        <p>￥{{v.price}}</p>
-                        <a href=""></a>
-                    </div>
+                    <router-link :to="{path:'/product-details/',query:{id:v.id}}">
+                        <img :src="v.image_url" alt="图片">
+                        <div class="content-bottom">
+                            <p>{{v.brief}}</p>
+                            <p>￥{{v.price}}</p>
+                            <a href=""></a>
+                        </div>
+                    </router-link>
                 </div>
 
                 <!-- <div class="content-right">
@@ -127,6 +129,7 @@ export default {
         background:url(../assets/images/search1.png) 0.8rem 0.8rem no-repeat;
         background-size:1.5rem 1.5rem;
         background-color:#fff;
+        outline: none;
     }
     .search-right{
         float:right;
@@ -214,7 +217,7 @@ export default {
     }
     .conter-nav ul li{
         float: left;
-        margin-right:0.2rem;
+        margin-right:1rem;
     }
     .conter-nav ul .conter-zh{
         margin-right:0;
@@ -247,15 +250,6 @@ export default {
         float: left;
         width: 44%;
         margin-left:1rem;
-    }
-    .content .content-right{
-        float:right;
-        width: 44%;
-        margin-right:1rem;
-    }
-    .content .content-right img{
-        width: 100%;
-        height: 100%;
     }
     .content .content-left img{
         width: 100%;

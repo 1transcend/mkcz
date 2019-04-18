@@ -3,6 +3,7 @@
         <Header/>
 
         <div class="content">
+            <router-link :to="{path:'/article-details/',query:{id:istop.id}}">
             <div class="content-bj">
                 <div class="content-img">
                 <img :src="istop.imageurl" alt="图片">
@@ -12,6 +13,7 @@
                     <div class="wz-img"></div>
                 </div>
             </div>
+            </router-link>
         </div>
 
         <div class="content1-bottom">
@@ -78,7 +80,7 @@ export default {
 
     .content{
         width: 100%;
-        height: 23rem;
+        height: 22rem;
         background:rgba(235,235,235,1);
         margin-top:5.01rem;
     }

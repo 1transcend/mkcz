@@ -256,8 +256,8 @@
 </template>
 
 <script>
-   import flexible from '../assets/js/flexible.js';
-   import flexible_css from '../assets/js/flexible_css.js';
+   import flexible from "../assets/js/flexible.js"
+   import flexible_css from "../assets/js/flexible_css.js"
     export default {
     }
 </script>

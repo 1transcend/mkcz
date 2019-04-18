@@ -14,7 +14,7 @@
         </div>
         </router-link>
 
-        <router-link to="article">
+        <router-link to="/article">
         <div class="xw">
             <img src="../assets/images/xw.png" alt="新闻">
             <a href="">新闻</a>

@@ -3,13 +3,23 @@
         <Header/>
 
         <div class="sp-bj">
-            <div class="sp-img">
+            <!-- <div class="sp-img">
                 <img src="../assets/images/sp.png" alt="图片">
-            </div>
+            </div> -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../assets/images/sp.png" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/images/sp.png" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/images/sp.png" alt=""></div>
+                    </div>
+                <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+                </div>
+
             <div class="sp-ms">
-                <p class="sp-title">网站建设 制作开发 网站建设 制作开发 网站建设 制作开发 网站建设 制作开发</p>
+                <p class="sp-title">{{info.title}}</p>
                 <div class="sp-left">
-                    <p class="sp-money">￥100.00</p>
+                    <p class="sp-money">￥{{info.price}}</p>
                     <p class="sp-gx">已更新20期&nbsp;|&nbsp;124人订阅</p>
                 </div>
                 <div class="sp-right">
@@ -39,7 +49,7 @@
                     <p class="sp-title2">网站是给您客户看的，不是拿来您自己观赏的！网站不只是艺术品！</p>
                 </div>
                 <div class="sp-img1">
-                    <img src="../assets/images/cp1.png" alt="">
+                    <img :src="info.image_url" alt="">
                 </div>
             </div>
         </div>
@@ -66,74 +76,46 @@
 <script>
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.min.css';
 export default {
     components:{
         Footer,
         Header
+    },
+    data(){
+        return {
+            info : []
+        }
+    },
+    created(){
+        this.axios.get("http://39.105.94.90/wxmkczgw/phone.php?app=goods&act=info&id="+this.$route.query.id,{
+        })
+        .then((res)=>{
+            console.log(res['data']['status']);
+            this.info = res['data']['status'][0]
+        })
+    },
+    mounted:function() {
+		        new Swiper('.swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+		
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: false,
+                    },
+                })
+        }
     }
-}
 </script>
 
 <style scoped>
     #app{
         background:rgba(235, 235, 235, 1);
-    }
-    header{
-    width: 100%;
-    background:rgba(242,242,242,1);
-    height: 5rem;
-    }
-    .header-left{
-        float: left;
-        width: 50%;
-        height: 100%;
-    }
-    .header-left .header-home{
-        float: left;
-        margin-top: 1.45rem;
-        margin-right: 0.4rem;
-        margin-left: 1rem;
-        width: 1.5rem ;
-        height: 1.5rem ;
-        background:url(../assets/images/home.png);
-        background-size: 100%;
-    }
-    .header-left .header-title{
-        float: left;
-        margin-top: 1.68rem;
-        font-size: 0.8rem;
-    }
-    .header-right{
-        float: right;
-        width: 50%;
-        height: 100%;
-    }
-    .header-right .personal{
-        float: right;
-        width: 1.5rem ;
-        height: 1.5rem ;
-        margin-top: 1.45rem;
-        margin-right: 1rem;
-        background:url(../assets/images/personal.png);
-        background-size:100%;
-    }
-    .header-right .ewm{
-        float: right;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-top:1.45rem;
-        margin-right: 1rem;
-        background:url(../assets/images/ewm.png);
-        background-size:100%;
-    }
-    .header-right .search{
-        float: right;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-top:1.45rem;
-        margin-right: 1rem;
-        background:url(../assets/images/search.png);
-        background-size:100%;
     }
 
     .sp-bj{
@@ -142,9 +124,16 @@ export default {
         background-color:#fff;
         margin-top:5rem;
     }
-    .sp-img img{
+    /* .swiper-container {
         width: 100%;
-        height: 15rem;
+        height: 100%;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    } */
+    .swiper-slide img{
+        width: 100%;
     }
     .sp-ms{
         width: 100%;
