@@ -598,6 +598,20 @@ import 'swiper/dist/css/swiper.min.css';
 export default {
     components:{
        Footer
+    },
+    mounted:function() {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+    
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+            })
     }
 }
 </script>
