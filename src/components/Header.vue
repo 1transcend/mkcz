@@ -1,7 +1,8 @@
 <template>
     <header>
         <div class="header-left">
-            <a class="header-home" href=""></a>
+            <!-- <a class="header-home" href=""></a> -->
+            <router-link class="header-home" to="/"></router-link>
             <p class="header-title">无锡明科财致网络</p>
         </div>
         <div class="header-right">

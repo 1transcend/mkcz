@@ -27,11 +27,11 @@
         <div class="conter">
             <div class="conter-nav">
                 <ul>
-                    <li><a class="active" href="">服务项目</a></li>
-                    <li><a href="">Web定制业务</a></li>
-                    <li><a href="">小程序</a></li>
-                    <li><a href="">APP定制</a></li>
-                    <li class="conter-zh"><a href="">企业系统</a></li>
+                    <li><a :class="{active:shows==1}" @click="fwshow()" href="#">服务项目</a></li>
+                    <li><a :class="{active:shows==2}" @click="webshow()" href="#">Web定制业务</a></li>
+                    <li><a :class="{active:shows==3}" @click="xcxshow()" href="#">小程序</a></li>
+                    <li><a :class="{active:shows==4}" @click="appshow()" href="#">APP定制</a></li>
+                    <li class="conter-zh"><a :class="{active:shows==5}" @click="qyshow()" href="#">企业系统</a></li>
                 </ul>
             </div>
 
@@ -63,15 +63,34 @@ export default {
     },
     data(){
         return{
-            info:[]
+            info:[],
+            shows:1
+        }
+    },
+    methods:{
+        fwshow:function(){
+            this.shows = 1;
+        },
+        webshow:function(){
+            this.shows = 2;
+        },
+        xcxshow:function(){
+            this.shows = 3;
+        },
+        appshow:function(){
+            this.shows = 4;
+        },
+        qyshow:function(){
+            this.shows = 5;
         }
     },
     created(){
         this.axios.get("wxmkczgw/phone.php?app=goods&act=index",{
         })
         .then((res)=>{
-            console.log(res['data']['status']);
-            this.info = res['data']['status']
+            console.log(res['data']['info']);
+            console.log(res);
+            this.info = res['data']['info']
         })
     }
 }
